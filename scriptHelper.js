@@ -1,31 +1,26 @@
 // Write your helper functions here!
+
+/*let faultyItems = document.getElementById('faultyItems');
+let fuelStatus = document.getElementById('fuelStatus');
+let launchStatus = document.getElementById('launchStatus');
+let pilotStatus = document.getElementById('pilotStatus');
+let copilotStatus = document.getElementById('copilotStatus');*/
+
+
 require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
-   // Here is the HTML formatting for our mission target div.
-   /*
+    let missionTarget = document.getElementById('missionTarget');      
+            missionTarget.innerHTML = `
                 <h2>Mission Destination</h2>
                 <ol>
-                    <li>Name: </li>
-                    <li>Diameter: </li>
+                    <li>Name: ${name}</li>
+                    <li>Diameter: ${diameter}</li>
                     <li>Star: ${star}</li>
-                    <li>Distance from Earth: </li>
-                    <li>Number of Moons: </li>
+                    <li>Distance from Earth: ${distance}</li>
+                    <li>Number of Moons: ${moons}</li>
                 </ol>
-                <img src="">
-   */
-            let missionTarget = document.getElementById('missionTarget');
-            let index = Math.floor(Math.random() * json.length - 1);
-            missionTarget.innerHTML += `
-                <h2>Mission Destination</h2>
-                <ol>
-                    <li>Name: ${json[index].name}</li>
-                    <li>Diameter: ${json[index].diameter}</li>
-                    <li>Star: ${json[index].star}</li>
-                    <li>Distance from Earth: ${json[index].distance}</li>
-                    <li>Number of Moons: ${json[index].moons}</li>
-                </ol>
-                <img src="${json[index].image}">
+                <img src="${image}">
                 `;
                     
 }
@@ -34,10 +29,18 @@ function validateInput(testInput) {
     document.addEventListener("submit", function (event) {
         event.preventDefault();
     
-                let pilotName = document.querySelector("[name=pilotName]").value;
-                let copilotName = document.querySelector("[name=copilotName]").value;
-                let fuelLevel = document.querySelector("[name=fuelLevel]").value;
-                let cargoMass = document.querySelector("[name=cargoMass]").value;
+                let pilotName = document.querySelector("input[name=pilotName]").value;
+                let copilotName = document.querySelector("input[name=copilotName]").value;
+                let fuelLevel = document.querySelector("input[name=fuelLevel]").value;
+                let cargoMass = document.querySelector("input[name=cargoMass]").value;
+
+                /*let faultyItems = document.getElementById('faultyItems');
+                let fuelStatus = document.getElementById('fuelStatus');
+                let launchStatus = document.getElementById('launchStatus');
+                let pilotStatus = document.getElementById('pilotStatus');
+                let copilotStatus = document.getElementById('copilotStatus');*/
+
+
 
                         let emptyFields = "";
                             let nonAlpha = "";
@@ -119,11 +122,10 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
 
 async function myFetch() {
     let planetsReturned;
-
-    planetsReturned = await fetch().then( function(response) {
-        });
-
+    planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
+        }); 
     return planetsReturned;
+    
 }
 
 function pickPlanet(planets) {
@@ -132,7 +134,7 @@ function pickPlanet(planets) {
             response.json().then(function (planetaryData) {
                 const missionTarget = document.getElementById("missionTarget");
                     let index = Math.floor(Math.random() * (planetaryData.length));
-                        missionTarget.innerHTML += `
+                        missionTarget.innerHTML = `
                             <div>                            
                                 <h2>Mission Destination</h2>   
                                     <ol>        
@@ -147,7 +149,7 @@ function pickPlanet(planets) {
                             `;
             });
         });
-    });
+    });        
 }
 
 module.exports.addDestinationInfo = addDestinationInfo;
