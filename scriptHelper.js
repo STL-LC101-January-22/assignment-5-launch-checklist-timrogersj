@@ -7,6 +7,7 @@ let pilotStatus = document.getElementById('pilotStatus');
 let copilotStatus = document.getElementById('copilotStatus');*/
 
 
+
 require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
@@ -20,7 +21,7 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
                     <li>Distance from Earth: ${distance}</li>
                     <li>Number of Moons: ${moons}</li>
                 </ol>
-                <img src="${image}">
+                <img src="${imageUrl}">
                 `;
                     
 }
@@ -51,15 +52,15 @@ function validateInput(testInput) {
                         }
     
                         if (pilotName.match(/[0-9]/g) != null) {
-                        nonAlpha = "Pilot and CoPilot names must be alphabet characters!\n";
+                        nonAlpha = "Make sure to enter valid information for each field!\n";
                         }
                         
                         if(copilotName.match(/[0-9]/g) != null) {
-                        nonAlpha = "Pilot and CoPilot names must be alphabet characters!\n";   
+                        nonAlpha = "Make sure to enter valid information for each field!\n";   
                         }
 
                         if (isNaN(fuelLevel) || isNaN(cargoMass)) {
-                        nonNumeric = "Fuel levels and Cargo mass must be numers!\n";
+                        nonNumeric = "Make sure to enter valid information for each field!\n";
                         }
                 
                         if (emptyFields || nonAlpha || nonNumeric) {
@@ -74,11 +75,9 @@ function validateInput(testInput) {
 }
 
 
-function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargoMass) {
-    launchStatus.innerHTML = `
-    <div>
-        <ol>
-            `
+function formSubmission(document, pilotName, copilotName, fuelLevel, cargoMass) {
+    launchStatus.innerHTML = 
+
         pilotStatus.innerHTML = `Pilot ${pilotName} Ready`;
 
         copilotStatus.innerHTML = `CoPilot ${copilotName} Ready`;
@@ -89,34 +88,31 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
                     launchStatus.style.color = `green`;
                         fuelStatus.innerHTML = `Fuel level high enough for launch`;
         }
-        if (fuelLevel <= 10000){
+        /*if (fuelLevel <= 10000){
             faultyItems.style.visibility = 'visible';
                 launchStatus.innerHTML = `Shuttle not ready for launch`;
                     launchStatus.style.color = `red`;
                         fuelStatus.innerHTML = `Fuel level too low for launch`;
-        }                
+        }*/                
         if (cargoMass <= 10000) {
             faultyItems.style.visibility = 'visible';
                 launchStatus.innerHTML = `Shuttle is ready for launch`;
                     launchStatus.style.color = `green`;
                         cargoStatus.innerHTML = `Cargo mass low enough for launch`;
         }    
-        /*if (fuelLevel <= 10000){
+        if (fuelLevel <= 10000){
             faultyItems.style.visibility = 'visible';
                 launchStatus.innerHTML = `Shuttle not ready for launch`;
                     launchStatus.style.color = `red`;
                         fuelStatus.innerHTML = `Fuel level too low for launch`;
-        }*/
+        }
         if (cargoMass >= 10000) {
             faultyItems.style.visibility = 'visible';
                 launchStatus.innerHTML = `Shuttle not ready for launch`;
                     launchStatus.style.color = `red`;
                         cargoStatus.innerHTML = `Cargo mass over capacity for launch`;
         }                                                     
-                `
-            </ol>
-        </div>
-        `;
+                ;
    
 }
 
