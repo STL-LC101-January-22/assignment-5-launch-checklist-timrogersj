@@ -76,6 +76,7 @@ function validateInput(testInput) {
 
 
 function formSubmission(document, pilotName, copilotName, fuelLevel, cargoMass) {
+    document = 
     launchStatus.innerHTML = 
 
         pilotStatus.innerHTML = `Pilot ${pilotName} Ready`;
