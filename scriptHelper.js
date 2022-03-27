@@ -34,9 +34,9 @@ function validateInput(testInput) {
     if (testInput === "") {
     return "Empty";
   } else if (isNaN(testInput)) {
-    return "Not a number";
+    return "Not a Number";
   } else if (testInput.type === Number) {
-    return "Is a number";
+    return "Is a Number";
   }    
 }
 
@@ -77,6 +77,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
             launchStatus.style.color = `red`;
             cargoStatus.innerHTML = 'Cargo mass over capacity for launch';
         }else{
+            faultyItems.style.visibility = 'hidden';
             launchStatus.innerHTML = 'Shuttle is ready for launch';
             launchStatus.style.color = `green`;
         }
