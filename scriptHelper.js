@@ -1,7 +1,7 @@
 // Write your helper functions here!
 
-/*let faultyItems = document.getElementById('faultyItems');
-let fuelStatus = document.getElementById('fuelStatus');
+let faultyItems = document.getElementById('faultyItems');
+/*let fuelStatus = document.getElementById('fuelStatus');
 let launchStatus = document.getElementById('launchStatus');
 let pilotStatus = document.getElementById('pilotStatus');
 let copilotStatus = document.getElementById('copilotStatus');*/
@@ -53,7 +53,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     if (validateInput(pilotName) === "Empty" ||validateInput(copilotName) === "Empty" ||validateInput(fuelLevel) === "Empty" ||validateInput(cargoMass) === "Empty") {
         alert = "All fields are required!";
       } else if (validateInput(cargoLevelValue) === "Not a number" ||validateInput(fuelLevelValue) === "Not a number") {
-        alert("You must enter a valid numerical input for these fields.");
+        alert = "You must enter a valid numerical input for these fields.";
       } else {
         list.style.visibility = "visible";
 
