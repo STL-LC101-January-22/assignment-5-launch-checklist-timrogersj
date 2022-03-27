@@ -1,30 +1,45 @@
-const { formSubmission } = require("./scriptHelper");
+// const { formSubmission } = require("./scriptHelper");
 
 // Write your JavaScript code here!
 window.addEventListener("load", function() {
     let listedPlanets;
     // Set listedPlanetsResponse equal to the value returned by calling myFetch()
-    let listedPlanetsResponse = myFetch();
-    listedPlanetsResponse.then(function (response) {response.json().then(function () {          
-    console.log(myFetch());
-    console.log(typeof jsonObject);
-    console.log(listedPlanets); 
+    let listedPlanetsResponse = myFetch()
+    .then(function(listOfPlanets) {
+        console.log(listOfPlanets) 
+        let chosenPlanet = pickPlanet(listOfPlanets);
+        addDestinationInfo(
+            document,
+            chosenPlanet.name,
+            chosenPlanet.diameter,
+            chosenPlanet.star,
+            chosenPlanet.distance,
+            chosenPlanet.moons,
+            chosenPlanet.image
+        );;
+    });
+    /*listedPlanetsResponse
+        .then(function (response) {
+            response.json().then(function () {          
+                console.log(myFetch());
+                console.log(typeof jsonObject);
+                console.log(listedPlanets); 
         
     
-    preventDefault();
-        return listedPlanets;
-});
-let chosenPlanet = pickPlanet(listedPlanets);
-addDestinationInfo(
-    document,
-    chosenPlanet.name,
-    chosenPlanet.diameter,
-    chosenPlanet.star,
-    chosenPlanet.distance,
-    chosenPlanet.moons,
-    chosenPlanet.image
-  );
-});
+                preventDefault();
+                return listedPlanets;
+            });
+            let chosenPlanet = pickPlanet(listedPlanets);
+            addDestinationInfo(
+                document,
+                chosenPlanet.name,
+                chosenPlanet.diameter,
+                chosenPlanet.star,
+                chosenPlanet.distance,
+                chosenPlanet.moons,
+                chosenPlanet.image
+            );
+        }); */
 
                             
     

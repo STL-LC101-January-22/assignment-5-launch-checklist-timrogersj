@@ -1,4 +1,5 @@
 // Write your helper functions here!
+require('isomorphic-fetch');
 
 let faultyItems = document.getElementById('faultyItems');
 /*let fuelStatus = document.getElementById('fuelStatus');
@@ -8,7 +9,7 @@ let copilotStatus = document.getElementById('copilotStatus');*/
 
 
 
-require('isomorphic-fetch');
+
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
     let missionTarget = document.getElementById('missionTarget');      
@@ -52,7 +53,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
 
     if (validateInput(pilotName) === "Empty" ||validateInput(copilotName) === "Empty" ||validateInput(fuelLevel) === "Empty" ||validateInput(cargoMass) === "Empty") {
         alert = "All fields are required!";
-      } else if (validateInput(cargoLevelValue) === "Not a number" ||validateInput(fuelLevelValue) === "Not a number") {
+      } else if (validateInput(cargoMass) === "Not a number" ||validateInput(fuelLevel) === "Not a number") {
         alert = "You must enter a valid numerical input for these fields.";
       } else {
         list.style.visibility = "visible";
