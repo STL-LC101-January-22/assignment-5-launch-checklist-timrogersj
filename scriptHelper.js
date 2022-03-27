@@ -66,12 +66,12 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
         copilotStatus.innerHTML = `CoPilot ${copilotName} Ready`;
       }
         //if validateInput
-        if (fuelLevel <= 9999){
+        if (fuelLevel < 10000){
             faultyItems.style.visibility = 'visible';
             launchStatus.innerHTML = 'Shuttle not ready for launch';
             launchStatus.style.color = `red`;
             fuelStatus.innerHTML = 'Fuel level too low for launch';
-        }else if (cargoMass >= 9999) {
+        }else if (cargoMass > 10000) {
             faultyItems.style.visibility = 'visible';
             launchStatus.innerHTML = 'Shuttle not ready for launch';
             launchStatus.style.color = `red`;
