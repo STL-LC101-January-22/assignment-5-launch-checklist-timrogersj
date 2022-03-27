@@ -51,7 +51,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     //launchStatus.innerHTML = 
 
     if (validateInput(pilotName) === "Empty" ||validateInput(copilotName) === "Empty" ||validateInput(fuelLevel) === "Empty" ||validateInput(cargoMass) === "Empty") {
-        alert("All fields are required!");
+        alert = "All fields are required!";
       } else if (validateInput(cargoLevelValue) === "Not a number" ||validateInput(fuelLevelValue) === "Not a number") {
         alert("You must enter a valid numerical input for these fields.");
       } else {
