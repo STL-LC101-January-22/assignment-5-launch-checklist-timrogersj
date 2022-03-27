@@ -1,7 +1,7 @@
 // Write your helper functions here!
 require('isomorphic-fetch');
 
-let faultyItems = document.getElementById('faultyItems');
+//let faultyItems = document.getElementById('faultyItems');
 /*let fuelStatus = document.getElementById('fuelStatus');
 let launchStatus = document.getElementById('launchStatus');
 let pilotStatus = document.getElementById('pilotStatus');
@@ -47,6 +47,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     fuelLevel = document.querySelector("input[name=fuelLevel]").value;
     cargoMass = document.querySelector("input[name=cargoMass]").value;
     list = document.getElementById("faultyItems");
+    let faultyItems = document.getElementById('faultyItems');
 
     //document = 
     //launchStatus.innerHTML = 
