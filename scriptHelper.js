@@ -57,12 +57,12 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
       } else if (validateInput(cargoMass) === "Not a number" ||validateInput(fuelLevel) === "Not a number") {
         alert = "You must enter a valid numerical input for these fields.";
       } else {
-        list.style.visibility = "visible";
+        list.style.visibility = "hidden";
 
         launchStatus = document.getElementById('launchStatus');
 
-        pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
-        copilotStatus.innerHTML = `CoPilot ${copilotName} is ready for launch`;
+        //pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
+        //copilotStatus.innerHTML = `CoPilot ${copilotName} is ready for launch`;
       }
         //if validateInput
         if (fuelLevel >= 10000 && cargoMass <= 10000) {
