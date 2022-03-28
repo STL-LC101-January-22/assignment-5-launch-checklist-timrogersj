@@ -77,7 +77,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
             launchStatus.style.color = `red`;
             cargoStatus.innerHTML = 'Cargo mass over capacity for launch';
         }else (fuelLevel > 10000 || cargoMass < 10000); {
-            faultyItems.style.visibility = 'hidden';
+            faultyItems.style.visibility = "hidden";
             launchStatus.innerHTML = 'Shuttle is ready for launch';
             launchStatus.style.color = `green`;
             fuelStatus.innerHTML = 'Fuel level high enough for launch';
