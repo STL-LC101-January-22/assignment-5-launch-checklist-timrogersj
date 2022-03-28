@@ -61,9 +61,8 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
 
         launchStatus = document.getElementById('launchStatus');
 
-        //pilotStatus.innerHTML = `Pilot ${pilotName} Ready`;
-
-        //copilotStatus.innerHTML = `CoPilot ${copilotName} Ready`;
+        pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
+        copilotStatus.innerHTML = `CoPilot ${copilotName} is ready for launch`;
       }
         //if validateInput
         if (fuelLevel >= 10000 && cargoMass <= 10000) {
