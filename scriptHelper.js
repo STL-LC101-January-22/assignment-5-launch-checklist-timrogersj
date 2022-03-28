@@ -67,7 +67,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
       }
         //if validateInput
         if (fuelLevel >= 10000) {
-            faultyItems.style.visibility = "visible";
+            faultyItems.style.visibility = "hidden";
             launchStatus.innerHTML = 'Shuttle is ready for launch';
             launchStatus.style.color = `green`;
             fuelStatus.innerHTML = 'Fuel level high enough for launch';
