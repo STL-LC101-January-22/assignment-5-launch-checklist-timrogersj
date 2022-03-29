@@ -45,17 +45,19 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     fuelLevel = document.querySelector("input[name=fuelLevel]").value;
     cargoMass = document.querySelector("input[name=cargoMass]").value; */
     list = document.getElementById("faultyItems");
-    
+    list.style.visibility = "hidden";
 
     //document = 
     //launchStatus.innerHTML = 
 
     if (validateInput(pilotName) === "Empty" ||validateInput(copilotName) === "Empty" ||validateInput(fuelLevel) === "Empty" ||validateInput(cargoMass) === "Empty") {
         alert = "All fields are required!";
+        return;
       } else if (validateInput(cargoMass) === "Not a number" ||validateInput(fuelLevel) === "Not a number") {
         alert = "You must enter a valid numerical input for these fields.";
+        return;
       } else {
-        list.style.visibility = "hidden";
+        
 
 
 
