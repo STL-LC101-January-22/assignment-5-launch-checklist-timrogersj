@@ -55,7 +55,9 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
       } else if (validateInput(cargoMass) === "Not a number" ||validateInput(fuelLevel) === "Not a number") {
         alert = "You must enter a valid numerical input for these fields.";
       } else {
-        list.style.visibility = "'hidden' : 'visible'";
+        list.style.visibility = "hidden";
+
+
 
         launchStatus = document.getElementById('launchStatus');
 
