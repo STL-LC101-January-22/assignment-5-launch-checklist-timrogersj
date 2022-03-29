@@ -67,15 +67,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
         //copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
       }
         //if validateInput
-        if (fuelLevel >= 10000 && cargoMass <= 10000) {
-            faultyItems.style.visibility = "visible";
-            pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
-            copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
-            launchStatus.innerHTML = "Shuttle is Ready for Launch";
-            launchStatus.style.color = `rgb(65, 159, 106)`;
-            fuelStatus.innerHTML = "Fuel level high enough for launch";
-            cargoStatus.innerHTML = "Cargo mass low enough for launch";
-        }
+
         /*if (cargoMass <= 10000) {
             faultyItems.style.visibility = 'visible';
             launchStatus.innerHTML = "Shuttle is Ready for Launch";
@@ -108,6 +100,15 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
             launchStatus.style.color = `rgb(199, 37, 78)`;
             fuelStatus.innerHTML = "Fuel level too low for launch";
             cargoStatus.innerHTML = "Cargo mass too heavy for launch";
+        }
+        if (fuelLevel >= 10000 && cargoMass <= 10000) {
+            faultyItems.style.visibility = "visible";
+            pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
+            copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
+            launchStatus.innerHTML = "Shuttle is Ready for Launch";
+            launchStatus.style.color = `rgb(65, 159, 106)`;
+            fuelStatus.innerHTML = "Fuel level high enough for launch";
+            cargoStatus.innerHTML = "Cargo mass low enough for launch";
         }
 
         
