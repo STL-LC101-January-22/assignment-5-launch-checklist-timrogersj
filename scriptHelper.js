@@ -1,14 +1,6 @@
 // Write your helper functions here!
 require('isomorphic-fetch');
 
-//let faultyItems = document.getElementById('faultyItems');
-/*let fuelStatus = document.getElementById('fuelStatus');
-let launchStatus = document.getElementById('launchStatus');
-let pilotStatus = document.getElementById('pilotStatus');
-let copilotStatus = document.getElementById('copilotStatus');*/
-
-
-
 
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
@@ -42,6 +34,9 @@ function validateInput(testInput) {
 
 
 function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargoMass) {
+    let faultyItems = document.getElementById('faultyItems');
+    let fuelStatus = document.getElementById('fuelStatus');
+    let launchStatus = document.getElementById('launchStatus');
     let pilotStatus = document.getElementById('pilotStatus');
     let copilotStatus = document.getElementById('copilotStatus');
     pilotName = document.querySelector("input[name=pilotName]").value;
@@ -49,7 +44,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     fuelLevel = document.querySelector("input[name=fuelLevel]").value;
     cargoMass = document.querySelector("input[name=cargoMass]").value;
     list = document.getElementById("faultyItems");
-    let faultyItems = document.getElementById('faultyItems');
+    
 
     //document = 
     //launchStatus.innerHTML = 
