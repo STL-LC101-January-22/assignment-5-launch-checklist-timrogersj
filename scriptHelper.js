@@ -45,7 +45,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     fuelLevel = document.querySelector("input[name=fuelLevel]").value;
     cargoMass = document.querySelector("input[name=cargoMass]").value; */
     list = document.getElementById("faultyItems");
-    list.style.visibility = "hidden";
+    //list.style.visibility = "hidden";
 
     //document = 
     //launchStatus.innerHTML = 
@@ -68,7 +68,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
       }
         //if validateInput
         if (fuelLevel >= 10000 && cargoMass <= 10000) {
-            faultyItems.style.visibility = "visible";
+            faultyItems.style.visibility = "hidden";
             pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
             copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
             launchStatus.innerHTML = "Shuttle is Ready for Launch";
