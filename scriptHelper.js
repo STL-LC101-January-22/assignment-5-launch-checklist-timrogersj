@@ -45,7 +45,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     fuelLevel = document.querySelector("input[name=fuelLevel]").value;
     cargoMass = document.querySelector("input[name=cargoMass]").value; */
     list = document.getElementById("faultyItems");
-    //list.style.visibility = "hidden";
+    list.style.visibility = "hidden";
 
     //document = 
     //launchStatus.innerHTML = 
