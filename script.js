@@ -47,15 +47,15 @@ window.addEventListener("load", function() {
    /*add event listener to the submit button on the form.  Check on inputs and assign to variables.*/
 //formsubmission function
   let form = document.querySelector("form");
+  let list = document.getElementById("faultyItems");
+  list.style.visibility = 'hidden';
   form.addEventListener("submit", function (event) {
     event.preventDefault();
-
     pilotName = document.querySelector("input[name=pilotName]").value;
     copilotName = document.querySelector("input[name=copilotName]").value;
     fuelLevel = document.querySelector("input[name=fuelLevel]").value;
     cargoMass = document.querySelector("input[name=cargoMass]").value;
 
-    let list = document.getElementById("faultyItems");
     formSubmission(document, list, pilotName, copilotName, fuelLevel, cargoMass);
   });
 });
