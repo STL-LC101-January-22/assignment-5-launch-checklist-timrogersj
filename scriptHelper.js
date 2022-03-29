@@ -23,7 +23,7 @@ function validateInput(testInput) {
     //document.addEventListener("submit", function (event) {
        // event.preventDefault();
 
-    if (testInput === "hidden") {
+    if (testInput === "") {
     return "Empty";
   } else if (isNaN(testInput)) {
     return "Not a Number";
