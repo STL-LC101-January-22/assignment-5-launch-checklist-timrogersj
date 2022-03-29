@@ -57,7 +57,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
       } else if (validateInput(cargoMass) === "Not a number" ||validateInput(fuelLevel) === "Not a number") {
         alert = "You must enter a valid numerical input for these fields.";
       } else {
-        list.style.visibility = "hidden";
+        list.style.visibility = "'hidden' : 'visible'";
 
         launchStatus = document.getElementById('launchStatus');
 
@@ -68,7 +68,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
         if (fuelLevel >= 10000 && cargoMass <= 10000) {
             faultyItems.style.visibility = "visible";
             pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
-            copilotStatus.innerHTML = `CoPilot ${copilotName} is ready for launch`;
+            copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
             launchStatus.innerHTML = "Shuttle is Ready for Launch";
             launchStatus.style.color = `green`;
             fuelStatus.innerHTML = "Fuel level high enough for launch";
@@ -83,7 +83,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
         if (fuelLevel <= 10000){
             faultyItems.style.visibility = 'visible';
             pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
-            copilotStatus.innerHTML = `CoPilot ${copilotName} is ready for launch`;
+            copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
             launchStatus.innerHTML = "Shuttle Not Ready for Launch";
             launchStatus.style.color = `red`;
             fuelStatus.innerHTML = "Fuel level too low for launch";
@@ -92,7 +92,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
         if (cargoMass >= 10000) {
             faultyItems.style.visibility = 'visible';
             pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
-            copilotStatus.innerHTML = `CoPilot ${copilotName} is ready for launch`;
+            copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
             launchStatus.innerHTML = "Shuttle Not Ready for Launch";
             launchStatus.style.color = `red`;
             fuelStatus.innerHTML = "Fuel level high enough for launch";
@@ -101,7 +101,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
         if (fuelLevel <= 10000 && cargoMass >= 10000) {
             faultyItems.style.visibility = 'visible';
             pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
-            copilotStatus.innerHTML = `CoPilot ${copilotName} is ready for launch`;
+            copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
             launchStatus.innerHTML = "Shuttle Not Ready for Launch";
             launchStatus.style.color = `red`;
             fuelStatus.innerHTML = "Fuel level too low for launch";
