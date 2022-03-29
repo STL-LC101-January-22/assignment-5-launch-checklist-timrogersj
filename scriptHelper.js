@@ -40,10 +40,10 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     let pilotStatus = document.getElementById('pilotStatus');
     let copilotStatus = document.getElementById('copilotStatus');
     let cargoStatus = document.getElementById('cargoStatus');
-    pilotName = document.querySelector("input[name=pilotName]").value;
+    /* pilotName = document.querySelector("input[name=pilotName]").value;
     copilotName = document.querySelector("input[name=copilotName]").value;
     fuelLevel = document.querySelector("input[name=fuelLevel]").value;
-    cargoMass = document.querySelector("input[name=cargoMass]").value;
+    cargoMass = document.querySelector("input[name=cargoMass]").value; */
     list = document.getElementById("faultyItems");
     
 
@@ -83,7 +83,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
             pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
             copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
             launchStatus.innerHTML = "Shuttle Not Ready for Launch";
-            launchStatus.style.color = `red`;
+            launchStatus.style.color = `rgb(199, 37, 78)`;
             fuelStatus.innerHTML = "Fuel level too low for launch";
             cargoStatus.innerHTML = "Cargo mass low enough for launch";
         }
@@ -92,7 +92,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
             pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
             copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
             launchStatus.innerHTML = "Shuttle Not Ready for Launch";
-            launchStatus.style.color = `red`;
+            launchStatus.style.color = `rgb(199, 37, 78)`;
             fuelStatus.innerHTML = "Fuel level high enough for launch";
             cargoStatus.innerHTML = "Cargo mass too heavy for launch";
         }
@@ -101,7 +101,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
             pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
             copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
             launchStatus.innerHTML = "Shuttle Not Ready for Launch";
-            launchStatus.style.color = `red`;
+            launchStatus.style.color = `rgb(199, 37, 78)`;
             fuelStatus.innerHTML = "Fuel level too low for launch";
             cargoStatus.innerHTML = "Cargo mass too heavy for launch";
         }
