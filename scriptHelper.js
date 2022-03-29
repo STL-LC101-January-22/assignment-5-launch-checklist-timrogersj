@@ -42,6 +42,8 @@ function validateInput(testInput) {
 
 
 function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargoMass) {
+    let pilotStatus = document.getElementById('pilotStatus');
+    let copilotStatus = document.getElementById('copilotStatus');
     pilotName = document.querySelector("input[name=pilotName]").value;
     copilotName = document.querySelector("input[name=copilotName]").value;
     fuelLevel = document.querySelector("input[name=fuelLevel]").value;
@@ -62,7 +64,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
         launchStatus = document.getElementById('launchStatus');
 
         //pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
-        //copilotStatus.innerHTML = `CoPilot ${copilotName} is ready for launch`;
+        //copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
       }
         //if validateInput
         if (fuelLevel >= 10000 && cargoMass <= 10000) {
