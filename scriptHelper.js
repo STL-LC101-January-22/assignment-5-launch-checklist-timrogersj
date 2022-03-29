@@ -68,7 +68,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
       }
         //if validateInput
         if (fuelLevel >= 10000 && cargoMass <= 10000) {
-            list.style.visibility = "hidden";
+            faultyItems.style.visibility = "visible";
             pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
             copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
             launchStatus.innerHTML = "Shuttle is Ready for Launch";
