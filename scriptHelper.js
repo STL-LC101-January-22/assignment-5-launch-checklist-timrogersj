@@ -62,7 +62,11 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
 
 
         launchStatus = document.getElementById('launchStatus');
-
+            faultyItems.style.visibility = 'hidden';
+            pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
+            copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
+            fuelStatus.innerHTML = "Fuel level high enough for launch";
+            cargoStatus.innerHTML = "Cargo mass low enough for launch";
         //pilotStatus.innerHTML = `Pilot ${pilotName} is ready for launch`;
         //copilotStatus.innerHTML = `Co-pilot ${copilotName} is ready for launch`;
       }
