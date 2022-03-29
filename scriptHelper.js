@@ -39,6 +39,7 @@ function formSubmission(document, list, pilotName, copilotName, fuelLevel, cargo
     let launchStatus = document.getElementById('launchStatus');
     let pilotStatus = document.getElementById('pilotStatus');
     let copilotStatus = document.getElementById('copilotStatus');
+    let cargoStatus = document.getElementById('cargoStatus');
     pilotName = document.querySelector("input[name=pilotName]").value;
     copilotName = document.querySelector("input[name=copilotName]").value;
     fuelLevel = document.querySelector("input[name=fuelLevel]").value;
